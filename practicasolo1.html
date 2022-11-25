@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Historial Veterinario</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- AGREGUE LIBRERIAS -->
+    <!-- Jquery Libary -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/inicio.css">
+
+    <link rel="icon" href="../img/icon.png">
+
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+
+    </header>
+    
+<main>
+    <div class="row">
+        <div class="container">
+            <div class="center" id="ContenedorInicio">
+                
+                <h5 class="white-text" id="Titulo">¿Quién de tus mascotas quieres revisar?</h5>
+
+                <!-- Botón para añadir mascota -->
+                <div class="col s12 m2 center-align" id="AddMascotaBoton">
+                    <h6 class="white-text">Añadir mascota</h6>
+                    <a href="#AddMascota" class="modal-trigger" ><i class="material-icons large">add</i></a>
+                </div>
+
+                <!-- Contenedor de las mascotas -->
+
+
+                <form action="" id="formidmascotainicio">
+                    <div class="col s12 m10 center-align" id="MascotasInicio">
+                        
+                        <input id="idmascota" name="idmascota" type="hidden">
+                    </div>
+                </form> 
+
+
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- Modals-->
+    <div class="modal" id="AddMascota">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12 m12 center-align">
+                    <h6>Añade una nueva mascota</h6>
+                    <a><i class="material-icons large">pets</i></a>
+                </div>
+
+                <form action="" id="FormNewMascota">
+
+                    <div class="input-field col s12 m12">
+                        <input type="text" id="NombreMascota" name="NombreMascota">
+                        <label for="NombreMascota">Nombre de tu mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select name="TipoMascota1" id="TipoMascota1">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="Canino">Perro</option>
+                            <option value="Felino">Gato</option>
+                        </select>
+                        <label>Su mascota es un: </label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select name="RazaMascota" id="RazaMascota">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                        </select>
+                        <label>Tipo de raza de tu mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select name="SexoMascota" id="SexoMascota">
+                            <option value="" disabled selected>¿Hembra o macho?</option>
+                            <option value="Hembra">Hembra</option>
+                            <option value="Macho">Macho</option>
+                        </select>
+                        <label>Sexo de tu mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <input type="text" id="ColorMascota" name="ColorMascota">
+                        <label for="ColorMascota">Color de mi mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <input type="text" id="CicatricesMascota" name="CicatricesMascota">
+                        <label for="CicatricesMascota">Cicatrices de mi mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select name="CondicionMascota" id="CondicionMascota">
+                            <option value="" disabled selected>¿Cuál es la condición de tu mascota?</option>
+                            <option value="Excelente">Excelente</option>
+                            <option value="Bueno">Bueno</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Mala">Mala</option>
+                        </select>
+                        <label>Condición de tu mascota:</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <input type="text" class="datepicker" id="NacimientoMascota" name="NacimientoMascota">
+                        <label for="NacimientoMascota">¿Cuando nacio tu mascota?</label>
+                    </div> 
+
+                    <div class="input-field col s12 m12">
+                        <input type="number" step=".001" id="PesoMascota" name="PesoMascota">
+                        <label for="PesoMascota">Peso de mi mascota (Kg):</label>
+                    </div>
+
+                    <div class="file-field input-field col s12 m12" >
+                        <div class="btn black">
+                          <span>Sube una foto de tu mascota:</span>
+                          <input type="file" name="FotoMascota" accept="image/*" id="FotoMascota" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" placeholder="Subir fotito" >
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="waves-effect waves-light btn col s12 blue-grey darken-4"
+                        name="RegistrarMascota">
+                        REGISTRAR A MI MASCOTA
+                    </button>
+
+                </form>
+
+            </div>
+        </div>        
+    </div>
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+                var elems = document.querySelectorAll('.parallax');
+                var instances = M.Parallax.init(elems);
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+                var collapsibleElem = document.querySelector('.collapsible');
+                var collapsibleInstance = M.Collapsible.init(collapsibleElem);
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+                var elems = document.querySelectorAll('.datepicker');
+                var instances = M.Datepicker.init(elems, {
+                    container: 'body',
+                    minDate: new Date(2000, 11, 31),
+                    maxDate: new Date(2029, 11, 11),
+                    yearRange: [2000, 2029],
+                    // Modifique esto la fecha en la esta formada
+                    format: 'yyyy-mm-dd',
+                    i18n: {
+                        months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                        monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                        weekdays: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+                        weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab'],
+                        weEkdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
+                    }
+                });
+            });
+        </script>
+    <script src="../Controllers/js/get_name.js"></script>
+    <script src="../Controllers/js/reg_mascota.js"></script>
+    <script src="../Controllers/js/get_mascotasinicio.js"></script>
+    <script src="../Controllers/js/get_raza.js"></script>
+    <script>$.get_raza();</script>
+    <script>$.check();</script>
+    <script>$.reg_mascota();</script>
+    <script>$.get_macotasinicio();</script>
+    <script>$.send_mascinicio();</script>
+ 
+
+    
+    </script>
+   
+</body>
+
+</html>
